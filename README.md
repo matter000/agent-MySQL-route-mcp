@@ -1,4 +1,4 @@
-# agent-mcp
+# agent-MySQL-route-mcp
 
 A monorepo of MCP (Model Context Protocol) servers for AI agents — currently
 focused on safe, single-process MySQL access for Claude Code and other MCP clients.
