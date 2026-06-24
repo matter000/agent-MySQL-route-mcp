@@ -1,0 +1,20 @@
+[project]
+name = "mysql-router-mcp"
+version = "0.1.0"
+description = "A single MCP server that routes SQL to multiple MySQL databases with read-only default and per-database write whitelist."
+requires-python = ">=3.12"
+readme = "README.md"
+dependencies = [
+    "aiomysql>=0.3.2",
+    "mcp[cli]>=1.28.0",
+]
+
+[project.scripts]
+mysql-router-mcp = "mysql_router_mcp.server:cli"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/mysql_router_mcp"]
